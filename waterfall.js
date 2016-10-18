@@ -20,7 +20,7 @@ async.waterfall([
     console.log('result => ' + result);
 });
 
-console.log("\n--------------------task => object----------------------\n");
+console.log("\n--------------------task => object（可以做个尝试，虽然waterfall只支持：函数传入方式为传入数组）----------------------\n");
 
 async.waterfall({
     one:function(callback){
@@ -59,6 +59,8 @@ async.waterfall([
     console.log('err => ' + err);
     console.log('result => ' + result);
 });
+
+
 
 console.log("\n--------------------task => 桉顺序执行----------------------\n");
 

@@ -44,3 +44,21 @@ async.parallel([
         console.log(err);
         console.log(results);
     });
+
+
+console.log("\n------------------tasks => --------并发执行-------------\n");
+
+async.parallel({
+        one:function(callback){
+            callback(null, 'one');
+            console.log("这是第一个");
+        },
+        two:function(callback){
+            // console.log("这是第二个");
+            callback(null, 'two');
+            console.log("这是第二个");
+        }
+    },
+    function(err, results){
+        console.log(results);
+    });
